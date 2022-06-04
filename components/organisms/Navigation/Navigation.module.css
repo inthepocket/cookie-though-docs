@@ -5,10 +5,6 @@
   flex-direction: column;
 }
 
-.toggleMenu + .navigation :global(.menu) {
-  display: none;
-}
-
 .toggleMenu:checked + .navigation {
   height: 100%;
 }

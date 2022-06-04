@@ -1,4 +1,17 @@
 .menu {
+  position: fixed;
+  top: 128px;
+  width: 100%;
+  height: calc(100vh - 128px);
   flex: 1;
-  background-color: red;
+}
+
+:global(#navigation-menu):not(:checked) + nav > .menu {
+  transform: translateX(-100%);
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .menu {
+    transition: transform 300ms ease-in-out;
+  }
 }
