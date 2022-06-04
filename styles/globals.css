@@ -1,3 +1,41 @@
+@import './typography.css';
+@import './a11y.css';
+
+:root {
+  /* Colors */
+  --neutral-000: #fff;
+  --neutral-900: #000;
+
+  /* Spacing */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 40px;
+
+  /* Fonts */
+  --sans-fallback: aria, helvetica, sans-serif;
+  --flama: flama, var(--sans-fallback);
+  --flama-semicondensed: 'flama semicondensed', var(--sans-fallback);
+}
+
+[data-theme='dark'] {
+  --neutral-000: #000;
+  --neutral-900: #fff;
+}
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  background-color: var(--neutral-900);
+  color: var(--neutral-000);
+  font-family: var(--flama);
+  font-size: 16px;
+  line-height: 1.1;
 }

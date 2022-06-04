@@ -1,0 +1,9 @@
+@font-face {
+  font-family: flama;
+  src: url('/fonts/Flama-Book.woff2');
+}
+
+@font-face {
+  font-family: 'flama semicondensed';
+  src: url('/fonts/FlamaSemicondensed-Basic.woff2');
+}

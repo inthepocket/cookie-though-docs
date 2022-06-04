@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: calc(var(--spacing-4) + 0.5px) var(--spacing-2);
+  cursor: pointer;
+}
+
+.hamburger {
+  display: flex;
+  width: 32px;
+  height: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger > span {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: var(--neutral-000);
+}
+
+:global(#navigation-menu):checked + nav .hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+:global(#navigation-menu):checked + nav .hamburger span {
+  width: 28px;
+}
+
+:global(#navigation-menu):checked + nav .hamburger span:first-of-type {
+  position: relative;
+  top: 1px;
+  transform: rotate(45deg);
+}
+
+:global(#navigation-menu):checked + nav .hamburger span:nth-of-type(2) {
+  display: none;
+}
+
+:global(#navigation-menu):checked + nav .hamburger span:last-of-type {
+  position: relative;
+  bottom: 1px;
+  transform: rotate(-45deg);
+}

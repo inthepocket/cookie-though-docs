@@ -1,0 +1,20 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.logo svg {
+  width: var(--spacing-8);
+  height: var(--spacing-8);
+}
+
+.logo span {
+  display: block;
+  height: fit-content;
+  padding-bottom: var(--spacing-1);
+  font-family: var(--flama-semicondensed);
+  font-size: 1.5rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
