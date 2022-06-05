@@ -18,3 +18,21 @@
   font-weight: 650;
   line-height: 1.2;
 }
+
+.logoFooter {
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.logoFooter svg {
+  width: 22px;
+  height: 22px;
+}
+
+.logoFooter svg path {
+  fill: var(--neutral-000);
+}
+
+.logoFooter span {
+  font-size: 1.3125rem;
+}

@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import Footer from '../components/molecules/Footer';
+
 import Features from '@organisms/Features';
 import Hero from '@organisms/Hero';
 import Navigation from '@organisms/Navigation';
@@ -21,6 +23,7 @@ const Home: NextPage = () => {
         <Hero />
         <Features />
       </main>
+      <Footer />
     </>
   );
 };

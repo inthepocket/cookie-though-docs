@@ -2,9 +2,13 @@ import styles from './Logo.module.css';
 
 import LogoIcon from '@icons/logo.svg';
 
-const Logo = () => {
+interface Props {
+  isFooter?: boolean;
+}
+
+const Logo = ({ isFooter = false }: Props) => {
   return (
-    <div className={styles.logo}>
+    <div className={`${styles.logo} ${isFooter ? styles.logoFooter : ''}`}>
       <LogoIcon />
       <span>cookie though</span>
     </div>

@@ -2,8 +2,11 @@
   position: fixed;
   top: 128px;
   left: -100%;
+  display: flex;
   width: 100%;
   height: calc(100vh - 128px);
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--neutral-900);
 }
 

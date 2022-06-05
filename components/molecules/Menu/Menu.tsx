@@ -1,10 +1,15 @@
 import styles from './Menu.module.css';
 
+import Footer from '@molecules/Footer';
+
 const Menu = () => {
   return (
-    <ul className={`menu ${styles.menu}`}>
-      <li>Docs</li>
-    </ul>
+    <div className={`menu ${styles.menu}`}>
+      <ul>
+        <li>Docs</li>
+      </ul>
+      <Footer />
+    </div>
   );
 };
 
