@@ -107,14 +107,6 @@ section {
   display: block;
 }
 
-/* stylelint-disable selector-id-pattern */
-html,
-body,
-#__next {
-  height: 100%;
-}
-/* stylelint-enable selector-id-pattern */
-
 body {
   line-height: 1;
 }

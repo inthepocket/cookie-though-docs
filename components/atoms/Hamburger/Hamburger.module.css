@@ -22,13 +22,19 @@
   background-color: var(--neutral-000);
 }
 
-:global(#navigation-menu):checked + nav .hamburger {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
+:global(#navigation-menu) + nav .hamburger span:first-of-type {
+  position: relative;
+  top: 0;
+}
+
+:global(#navigation-menu) + nav .hamburger span:nth-of-type(2) {
+  position: relative;
+  left: 0;
+}
+
+:global(#navigation-menu) + nav .hamburger span:last-of-type {
+  position: relative;
+  bottom: 0;
 }
 
 :global(#navigation-menu):checked + nav .hamburger span {
@@ -36,17 +42,26 @@
 }
 
 :global(#navigation-menu):checked + nav .hamburger span:first-of-type {
-  position: relative;
-  top: 1px;
+  top: 6.5px;
   transform: rotate(45deg);
 }
 
 :global(#navigation-menu):checked + nav .hamburger span:nth-of-type(2) {
-  display: none;
+  left: 100%;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 :global(#navigation-menu):checked + nav .hamburger span:last-of-type {
-  position: relative;
-  bottom: 1px;
+  bottom: 6.5px;
   transform: rotate(-45deg);
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .hamburger span {
+    transition-duration: 300ms;
+    transition-property: top, bottom, left, height, opacity, width, transform;
+    transition-timing-function: ease-in-out;
+  }
 }

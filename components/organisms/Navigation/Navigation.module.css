@@ -4,8 +4,9 @@
   top: 0;
   display: flex;
   flex-direction: column;
+  background-color: var(--neutral-900);
 }
 
-.toggleMenu:checked + .navigation :global(.menu) {
-  display: block;
+.toggleMenu {
+  display: none;
 }
