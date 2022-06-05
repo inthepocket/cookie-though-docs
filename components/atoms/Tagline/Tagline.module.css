@@ -1,0 +1,26 @@
+p.tagline {
+  line-height: 1;
+}
+
+.tagline > strong {
+  font-family: var(--next-poster);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.tagline-hero {
+  margin-bottom: var(--spacing-6);
+  font-family: var(--flama-semicondensed-light);
+  font-size: 3.25rem;
+  font-weight: 450;
+}
+
+.tagline-hero > strong {
+  font-size: inherit;
+}
+
+.tagline-feature {
+  margin-bottom: var(--spacing-4);
+  font-size: 3.5rem;
+  font-weight: 400;
+}

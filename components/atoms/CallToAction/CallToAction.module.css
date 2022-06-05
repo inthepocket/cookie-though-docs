@@ -1,0 +1,16 @@
+.callToAction {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-6);
+  backdrop-filter: blur(66.9251px);
+  background: #181818;
+  border-radius: 42.832px;
+  color: var(--white);
+  font-family: 'Fira Code', sans-serif;
+  gap: var(--spacing-6);
+}
+
+.callToAction > svg {
+  width: 28px;
+  height: 28px;
+}

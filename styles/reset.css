@@ -146,3 +146,12 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+button {
+  padding: 0;
+  border: none;
+  background-color: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}

@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - 128px);
+  padding: 0 var(--spacing-6);
+}
+
+.description {
+  margin-bottom: var(--spacing-4);
+  line-height: 1.5;
+}
+
+.callToActions {
+  margin-bottom: var(--spacing-6);
+}
+
+.callToActions > li:not(:first-child) {
+  display: none;
+}
+
+.teaser {
+  margin-bottom: var(--spacing-10);
+  box-shadow: 0 1.8263px 17.35px -3.6526px rgb(1 1 63 / 10%);
+}
+
+.scrollDown {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scrollDown > a {
+  display: inline-flex;
+}

@@ -1,17 +1,18 @@
 .menu {
   position: fixed;
   top: 128px;
+  left: -100%;
   width: 100%;
   height: calc(100vh - 128px);
-  flex: 1;
+  background-color: var(--neutral-900);
 }
 
-:global(#navigation-menu):not(:checked) + nav > .menu {
-  transform: translateX(-100%);
+:global(#navigation-menu):checked + nav > .menu {
+  left: 0;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
   .menu {
-    transition: transform 300ms ease-in-out;
+    transition: left 300ms ease-in-out;
   }
 }
