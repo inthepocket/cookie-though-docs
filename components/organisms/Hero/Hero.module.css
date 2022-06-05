@@ -6,7 +6,8 @@
 
 .description {
   margin-bottom: var(--spacing-4);
-  line-height: 1.5;
+  font-weight: 550;
+  line-height: 1.625;
 }
 
 .callToActions {
@@ -20,6 +21,7 @@
 .teaser {
   margin-bottom: var(--spacing-10);
   box-shadow: 0 1.8263px 17.35px -3.6526px rgb(1 1 63 / 10%);
+  filter: drop-shadow(0 21px 28px rgb(0 0 0 / 25%));
 }
 
 .scrollDown {

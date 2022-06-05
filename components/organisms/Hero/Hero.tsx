@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { MouseEvent } from 'react';
 
 import closedBanner from '../../../public/images/example-collapsed.png';
 
@@ -11,9 +12,14 @@ import ArrowDown from '@icons/arrow-down.svg';
 import ArrowRight from '@icons/arrow-right.svg';
 
 const Hero = () => {
+  const scrollToFeatures = (e: MouseEvent) => {
+    e.preventDefault();
+    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className={styles.hero}>
-      <Tagline type="p" variant="hero">
+    <section className={styles.hero}>
+      <Tagline type="h1" variant="hero">
         User consent
         <br />
         <strong>Made delicious</strong>
@@ -38,12 +44,12 @@ const Hero = () => {
       </div>
       <div className={styles.scrollDown}>
         <Link href="#features">
-          <a>
+          <a onClick={scrollToFeatures}>
             <ArrowDown />
           </a>
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,0 +1,13 @@
+.features {
+  position: relative;
+  height: calc(calc(3 * 100vh) - calc(3 * 128px));
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.content {
+  position: sticky;
+  top: 128px;
+  overflow: hidden;
+  height: calc(100vh - 128px);
+}

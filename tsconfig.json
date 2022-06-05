@@ -17,6 +17,8 @@
     "baseUrl": "./",
     "paths": {
       "@icons/*": ["icons/*"],
+      "@styles/*": ["styles/*"],
+      "@context/*": ["context/*"],
       "@atoms/*": ["components/atoms/*"],
       "@molecules/*": ["components/molecules/*"],
       "@organisms/*": ["components/organisms/*"]

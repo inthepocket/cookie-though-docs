@@ -1,0 +1,5 @@
+.background {
+  position: relative;
+  box-shadow: 0 1.8641px 17.7092px -3.7282px rgb(1 1 63 / 10%);
+  filter: drop-shadow(0 21px 28px rgb(0 0 0 / 25%));
+}

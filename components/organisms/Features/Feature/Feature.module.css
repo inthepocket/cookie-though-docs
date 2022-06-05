@@ -1,0 +1,17 @@
+.feature,
+.content {
+  height: inherit;
+}
+
+.feature {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  padding: 0 var(--spacing-6);
+  font-weight: 550;
+  letter-spacing: 0.61px;
+  line-height: 1.625;
+}
