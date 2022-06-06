@@ -2,8 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { MouseEvent } from 'react';
 
-import closedBanner from '../../../public/images/example-collapsed.png';
-
 import styles from './Hero.module.css';
 
 import CallToAction from '@atoms/CallToAction';
@@ -11,6 +9,7 @@ import Tagline from '@atoms/Tagline';
 import ArrowDown from '@icons/arrow-down.svg';
 import ArrowRight from '@icons/arrow-right.svg';
 import Copy from '@icons/copy.svg';
+import closedBanner from '@public/images/example-collapsed.png';
 
 const Hero = () => {
   const scrollToFeatures = (e: MouseEvent) => {

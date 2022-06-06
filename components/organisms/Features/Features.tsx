@@ -1,8 +1,5 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
 
-import bannerCollapsed from '../../../public/images/example-collapsed.png';
-import bannerExpanded from '../../../public/images/example-expanded.png';
-
 import Feature from './Feature';
 import styles from './Features.module.css';
 
@@ -10,6 +7,8 @@ import { ScrollContext } from '@context/ScrollContext';
 import Accessibility from '@icons/accessibility.svg';
 import Compliant from '@icons/compliant.svg';
 import Lightweight from '@icons/lightweight.svg';
+import bannerCollapsed from '@public/images/example-collapsed.png';
+import bannerExpanded from '@public/images/example-expanded.png';
 
 interface FeaturesContextValue {
   numberOfFeatures: number;

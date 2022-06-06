@@ -1,11 +1,10 @@
 import Link from 'next/link';
 
-import ThemeToggle from '../../atoms/ThemeToggle';
-
 import styles from './Header.module.css';
 
 import Hamburger from '@atoms/Hamburger';
 import Logo from '@atoms/Logo';
+import ThemeToggle from '@atoms/ThemeToggle';
 
 interface Props {
   id: string;

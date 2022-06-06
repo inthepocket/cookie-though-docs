@@ -16,6 +16,7 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
+      "@public/*": ["public/*"],
       "@icons/*": ["icons/*"],
       "@styles/*": ["styles/*"],
       "@hooks/*": ["hooks/*"],
