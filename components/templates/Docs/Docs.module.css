@@ -1,0 +1,51 @@
+.docs > main {
+  padding: 0 var(--spacing-6);
+}
+
+.header {
+  margin-bottom: var(--spacing-9);
+  font-size: 1.125rem;
+}
+
+.docs :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+.docs h1 {
+  margin-bottom: var(--spacing-3);
+  font-size: 2rem;
+}
+
+.docs :is(h2, h3) {
+  margin-top: var(--spacing-9);
+}
+
+.docs h2 {
+  margin-bottom: var(--spacing-4);
+  font-size: 1.5rem;
+}
+
+.docs h3 {
+  margin-bottom: var(--spacing-1);
+  font-size: 1.25rem;
+}
+
+.docs p {
+  margin-bottom: var(--spacing-4);
+  line-height: 1.75rem;
+}
+
+.docs article ul {
+  padding-left: var(--spacing-4);
+  margin: var(--spacing-4) 0;
+}
+
+.docs article li {
+  margin-bottom: var(--spacing-2);
+  list-style: disc;
+}
+
+.docs article li pre {
+  margin: var(--spacing-2) 0 var(--spacing-4);
+}

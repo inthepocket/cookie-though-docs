@@ -30,4 +30,5 @@
   --flama-semicondensed-light: 'flama semicondensed light', var(--sans-fallback);
   --next: 'next', var(--sans-fallback);
   --next-poster: 'next poster', var(--sans-fallback);
+  --fira: 'fira code', var(--sans-fallback);
 }

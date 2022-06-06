@@ -1,6 +1,7 @@
 @import './reset.css';
 @import './typography.css';
 @import './a11y.css';
+@import './rehype.css';
 
 :root {
   /* Colors */

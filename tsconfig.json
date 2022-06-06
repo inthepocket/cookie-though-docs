@@ -17,13 +17,15 @@
     "baseUrl": "./",
     "paths": {
       "@public/*": ["public/*"],
-      "@icons/*": ["icons/*"],
+      "@icons/*": ["assets/icons/*"],
       "@styles/*": ["styles/*"],
       "@hooks/*": ["hooks/*"],
       "@context/*": ["context/*"],
+      "@mdx": ["components/mdx/index.tsx"],
       "@atoms/*": ["components/atoms/*"],
       "@molecules/*": ["components/molecules/*"],
-      "@organisms/*": ["components/organisms/*"]
+      "@organisms/*": ["components/organisms/*"],
+      "@templates/*": ["components/templates/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

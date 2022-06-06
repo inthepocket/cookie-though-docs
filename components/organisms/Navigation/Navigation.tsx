@@ -5,7 +5,11 @@ import styles from './Navigation.module.css';
 import Header from '@molecules/Header';
 import Menu from '@molecules/Menu';
 
-const Navigation = () => {
+interface Props {
+  isDocs?: boolean;
+}
+
+const Navigation = ({ isDocs = false }: Props) => {
   const id = 'navigation-menu';
 
   const handleChange = ({ target: { checked } }: ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +29,7 @@ const Navigation = () => {
         onChange={handleChange}
       />
       <nav className={styles.navigation}>
-        <Header id={id} />
+        <Header id={id} isDocs={isDocs} />
         <Menu />
       </nav>
     </>

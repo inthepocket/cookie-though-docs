@@ -6,22 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix --ext .tsx,ts pages/ components/",
+    "lint": "eslint --fix --ext .tsx,ts,mdx pages/ components/",
     "postinstall": "./scripts/postinstall.sh",
     "prettier": "prettier --write components pages styles",
     "stylelint": "stylelint '**/*.css' --fix"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.1.1",
+    "@next/mdx": "^12.1.6",
+    "eslint-plugin-mdx": "^1.17.0",
     "next": "12.1.6",
     "next-themes": "^0.2.0",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "rehype-pretty-code": "^0.3.2",
+    "shiki": "^0.10.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "@inthepocket/eslint-config-next": "^1.2.9",
     "@svgr/webpack": "^6.2.1",
+    "@types/mdx": "^2.0.2",
     "@types/node": "17.0.39",
     "@types/react": "18.0.11",
     "@types/react-dom": "18.0.5",

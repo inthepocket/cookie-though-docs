@@ -8,11 +8,12 @@ import ThemeToggle from '@atoms/ThemeToggle';
 
 interface Props {
   id: string;
+  isDocs: boolean;
 }
 
-const Header = ({ id }: Props) => {
+const Header = ({ id, isDocs }: Props) => {
   return (
-    <ul className={styles.header}>
+    <ul className={`${styles.header} ${isDocs ? styles.headerDocs : ''}`}>
       <li>
         <Link href="/">
           <a>

@@ -1,0 +1,35 @@
+import Link from 'next/link';
+
+import styles from './Heading.module.css';
+
+import LinkIcon from '@icons/link.svg';
+
+export interface HeadingChildren {
+  children: Props['children'];
+}
+
+type HTMLHeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+type Props = {
+  Tag: HTMLHeadingTag;
+  children: string;
+};
+
+const toSlug = (label: string) => label.toLowerCase().replace(/[\s.]/g, '-').replace(/[.:]/g, '');
+
+const Heading = ({ Tag, children }: Props) => {
+  const slug = toSlug(children);
+
+  return (
+    <Tag id={slug} className={styles.heading}>
+      <Link href={`#${slug}`}>
+        <a>
+          {children}
+          <LinkIcon width="16" height="16" viewBox="0 0 20 20" />
+        </a>
+      </Link>
+    </Tag>
+  );
+};
+
+export default Heading;

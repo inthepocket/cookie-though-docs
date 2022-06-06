@@ -37,4 +37,8 @@
   .hamburger {
     display: none;
   }
+
+  .headerDocs {
+    display: none;
+  }
 }
