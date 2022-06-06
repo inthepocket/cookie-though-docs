@@ -1,17 +1,18 @@
 .heading {
-  scroll-margin-top: 1.5rem;
+  scroll-margin-top: calc(100px + var(--spacing-6));
 }
 
 .heading > a {
   display: flex;
+  width: fit-content;
   align-items: center;
 }
 
 .heading > a > svg {
-  margin-left: 0.5rem;
+  margin-left: var(--spacing-2);
   opacity: 0;
 }
 
-.header > a:hover > svg {
+.heading > a:hover > svg {
   opacity: 1;
 }
