@@ -8,12 +8,11 @@ import ThemeToggle from '@atoms/ThemeToggle';
 
 interface Props {
   id: string;
-  isDocs: boolean;
 }
 
-const Header = ({ id, isDocs }: Props) => {
+const Header = ({ id }: Props) => {
   return (
-    <ul className={`${styles.header} ${isDocs ? styles.headerDocs : ''}`}>
+    <ul className={styles.header}>
       <li>
         <Link href="/">
           <a>
@@ -23,8 +22,20 @@ const Header = ({ id, isDocs }: Props) => {
       </li>
       <div className={styles.links}>
         <div className={styles.linksDesktop}>
-          <li>Documentation</li>
-          <li>GitHub</li>
+          <li>
+            <Link href="/docs/installation">
+              <a>Documentation</a>
+            </Link>
+          </li>
+          <li>
+            <a
+              href="https://github.com/inthepocket/cookie-though"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              GitHub
+            </a>
+          </li>
         </div>
         <li>
           <ThemeToggle />

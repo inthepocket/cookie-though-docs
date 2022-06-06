@@ -28,8 +28,8 @@ const Navigation = ({ isDocs = false }: Props) => {
         role="button"
         onChange={handleChange}
       />
-      <nav className={styles.navigation}>
-        <Header id={id} isDocs={isDocs} />
+      <nav className={`${styles.navigation}  ${isDocs ? styles.navigationDocs : ''}`}>
+        <Header id={id} />
         <Menu />
       </nav>
     </>

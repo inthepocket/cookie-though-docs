@@ -49,3 +49,27 @@
 .docs article li pre {
   margin: var(--spacing-2) 0 var(--spacing-4);
 }
+
+@media screen and (min-width: 56.25rem) {
+  .docs {
+    width: 100%;
+    max-width: 75rem;
+    margin-inline: auto;
+  }
+
+  .docs main {
+    flex: 1;
+    padding: var(--spacing-6);
+    padding-left: calc(250px + var(--spacing-6));
+    overflow-y: scroll;
+  }
+
+  .docs article {
+    max-width: 48rem;
+    font-size: 1.125rem;
+  }
+
+  .content {
+    display: flex;
+  }
+}
