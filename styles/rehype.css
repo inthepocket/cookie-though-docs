@@ -28,3 +28,11 @@ pre .line {
 [data-theme='dark'] pre {
   background-color: #282c34;
 }
+
+@media screen and (min-width: 56.25rem) {
+  pre,
+  code {
+    font-size: 1rem;
+    line-height: 2.25;
+  }
+}

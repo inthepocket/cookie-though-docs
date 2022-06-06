@@ -62,6 +62,7 @@
 
   .footer > a {
     align-items: flex-end;
+    align-self: flex-start;
     margin-inline: 0;
   }
 
