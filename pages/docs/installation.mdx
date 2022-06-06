@@ -1,0 +1,59 @@
+import Docs from '@templates/Docs';
+
+export const frontmatter = {
+  title: 'Installation',
+  description: 'How to install Cookie Though and get up and running.',
+};
+
+It's important to note that Cookie Though only saves the preferences.
+Implementing the cookies should be handled by you! In order to aid with this,
+we have written some tutorials for different types of applications, which can
+be viewed [here](/docs/tutorials).
+
+### Install Cookie Though
+
+Install Cookie Though through npm or yarn.
+
+```shell
+# With npm
+npm install cookie-though
+
+# With yarn
+yarn add cookie-though
+```
+
+### Import it
+
+Import `init(){:js}` from `'cookie-though'{:js}`.
+
+```js
+import { init } from 'cookie-though';
+```
+
+### Initialise it
+
+Use the `init(){:js}` function to render Cookie Though with the default
+configuration.
+
+```js
+import { init } from 'cookie-though';
+
+init();
+```
+
+## Using Cookie Though through a CDN
+
+If you're not using a package manager, you can add Cookie Though to your site
+using a `<script>{:html}` tag.
+
+```html
+<script type="module">
+  import { init } from 'https://cookiethough.dev/lib/<version>';
+
+  init();
+</script>
+```
+
+export default function render({ children }) {
+  return <Docs frontmatter={frontmatter}>{children}</Docs>;
+}

@@ -1,0 +1,155 @@
+import Docs from '@templates/Docs';
+
+export const frontmatter = {
+  title: 'Configuration',
+  description: 'How to configure Cookie Though.',
+};
+
+### Create a configuration object
+
+To configure Cookie Though, create a configuration object and pass it to the
+`init(){:js}` function.
+
+```js
+import { init } from 'cookie-though';
+
+const config = {};
+init(config);
+```
+
+### Changing the configuration
+
+If you need to change the configuration at runtime, if you wish to change the
+language for example, you can do so using the `configure(){:js}` function with
+the new configuration object.
+
+```js
+import { init, configure } from 'cookie-though';
+
+const englishConfig = {};
+const dutchConfig = {};
+
+init(englishConfig);
+
+const onLanguageChange = () => {
+  configure(dutchConfig);
+};
+```
+
+## Options
+
+### cookiePreferencesKey
+
+The key of the cookie where the user's preferences are stored.
+
+- **Type**: `string{:.type}`
+- **Default**: `'cookie-preferences'{:ts}`
+
+### ariaLabel
+
+Announces the presence of a cookie banner to a user using a screenreader.
+
+- **Type**: `string{:.type}`
+- **Default**: `'Cookie policy'{:ts}`
+
+### optionsAriaLabel
+
+Announces a group of cookie options to a user using a screenreader.
+
+- **Type**: `string{:.type}`
+- **Default**: `'Cookie options'{:js}`
+
+### header
+
+The labels for the header of Cookie Though.
+
+- **Type**: `Header{:.type}`
+  ```ts
+  type Header = {
+    intro: string;
+    title: string;
+    description: string;
+  };
+  ```
+- **Default**:
+  ```ts
+  const header = {
+    intro: "You're probably fed up with these banners...",
+    title: 'cookie though?',
+    {/* prettier-ignore  */}
+    description: "Everybody wants to show his best side - and so do we. That's why we use cookies to guarantee you a better experience.",
+  };
+  ```
+
+### policies
+
+Lets the user know this policy is essential.
+
+- **Type**: `Policy{:.type}`<></>`[]{:.operator}`
+  ```ts
+  type Policy = {
+    id: string;
+    label: string;
+    description: string;
+    category:
+      | 'essential'
+      | 'social'
+      | 'personalisation'
+      | 'marketing'
+      | 'statistics'
+      | 'functional';
+  };
+  ```
+- **Default**: A list of all possible policies
+- **Required**
+
+### essentialLabel
+
+The label for the customize `<summary>{:html}` tag which opens and closes the
+cookie options.
+
+- **Type**: `string{:.type}`
+- **Default**: `'Always on'{:ts}`
+
+### customizeLabel
+
+- **Type**: `string{:.type}`
+- **Default**: `'Customize'{:ts}`
+
+### cookiePolicy
+
+The link to the site's cookie policy.
+
+- **Type**: `CookiePolicy{:.type}`
+  ```ts
+  type CookiePolicy = {
+    url: string;
+    label: string;
+  };
+  ```
+- **Default**: `undefined{:ts}`
+
+### permissionLabels
+
+The labels which allow the user to accept (all) or decline the policies.
+
+- **Type**: `PermissionLabels{:.type}`
+  ```ts
+  type PermissionLabels = {
+    accept: string;
+    acceptAll: string;
+    decline: string;
+  };
+  ```
+- **Default**:
+  ```ts
+  const permissionLabels = {
+    accept: 'Accept';
+    acceptAll: 'Accept all';
+    decline: 'Decline';
+  };
+  ```
+
+export default function render({ children }) {
+  return <Docs frontmatter={frontmatter}>{children}</Docs>;
+}
