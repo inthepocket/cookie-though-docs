@@ -3,3 +3,11 @@
   height: 48px;
   margin-bottom: var(--spacing-2);
 }
+
+@media screen and (min-width: 48rem) {
+  .icon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: var(--spacing-6);
+  }
+}

@@ -5,8 +5,8 @@
 }
 
 .logo svg {
-  width: var(--spacing-8);
-  height: var(--spacing-8);
+  width: 32px;
+  height: 32px;
 }
 
 .logo span {
@@ -24,6 +24,10 @@
   line-height: 1.5;
 }
 
+.logoFooter span {
+  font-size: 1.3125rem;
+}
+
 .logoFooter svg {
   width: 22px;
   height: 22px;
@@ -33,6 +37,18 @@
   fill: var(--neutral-000);
 }
 
-.logoFooter span {
-  font-size: 1.3125rem;
+@media screen and (min-width: 48rem) {
+  .logo span {
+    font-size: 2rem;
+  }
+
+  .logoFooter span {
+    padding-bottom: var(--spacing-1);
+    font-size: 2rem;
+  }
+
+  .logoFooter svg {
+    width: 32px;
+    height: 32px;
+  }
 }

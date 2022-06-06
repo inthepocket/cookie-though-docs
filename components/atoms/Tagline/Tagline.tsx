@@ -10,11 +10,7 @@ interface Props {
 }
 
 const Tagline = ({ type, variant, children }: Props) => {
-  return createElement(
-    type,
-    { className: `${styles.tagline} ${styles[`tagline-${variant}`]}` },
-    children,
-  );
+  return createElement(type, { className: styles[`tagline-${variant}`] }, children);
 };
 
 export default Tagline;

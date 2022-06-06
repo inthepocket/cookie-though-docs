@@ -31,4 +31,29 @@
 
 .scrollDown > a {
   display: inline-flex;
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (min-width: 48rem) {
+  .description {
+    margin-bottom: var(--spacing-8);
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .callToActions {
+    margin-bottom: var(--spacing-10);
+  }
+
+  .teaser {
+    max-width: 70%;
+    margin-bottom: var(--spacing-12);
+    margin-inline: auto;
+  }
+
+  .scrollDown > a {
+    width: 28px;
+    height: 28px;
+  }
 }

@@ -21,6 +21,7 @@
   --spacing-9: 40px;
   --spacing-10: 48px;
   --spacing-11: 56px;
+  --spacing-12: 64px;
 }
 
 [data-theme='dark'] {

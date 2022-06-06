@@ -14,3 +14,11 @@
   width: 28px;
   height: 28px;
 }
+
+@media screen and (min-width: 48rem) {
+  .callToAction {
+    padding: var(--spacing-4) var(--spacing-9);
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
