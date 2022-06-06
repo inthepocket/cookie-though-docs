@@ -26,8 +26,11 @@ const withMDX = require('@next/mdx')({
 
 /** @type {import('next').NextConfig} */
 module.exports = withMDX({
-  reactStrictMode: true,
+  assetPrefix: process.env.ASSET_PREFIX,
+  basePath: process.env.BASE_PATH,
+  images: { loader: 'custom' },
   pageExtensions: ['tsx', 'mdx'],
+  reactStrictMode: true,
   async redirects() {
     return [{ source: '/docs', destination: '/docs/installation', permanent: true }];
   },

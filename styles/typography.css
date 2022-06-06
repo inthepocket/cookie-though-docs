@@ -1,34 +1,34 @@
 @font-face {
-  font-family: flama;
-  src: url('/fonts/Flama-Book.woff2');
+  font-family: Flama;
+  src: url('/fonts/Flama-Book.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'flama semicondensed';
-  src: url('/fonts/FlamaSemicondensed-Basic.woff2');
+  font-family: 'Flama Semicondensed';
+  src: url('/fonts/FlamaSemicondensed-Basic.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'flama semicondensed light';
-  src: url('/fonts/FlamaSemicondensed-Light.woff2');
+  font-family: 'Flama Semicondensed Light';
+  src: url('/fonts/FlamaSemicondensed-Light.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'next poster';
-  src: url('/fonts/NEXT-Poster-Regular.woff2');
+  font-family: 'NEXT Poster';
+  src: url('/fonts/NEXT-Poster-Regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: next;
-  src: url('/fonts/NEXT-Book-Regular.woff2');
+  font-family: NEXT;
+  src: url('/fonts/NEXT-Book-Regular.woff2') format('woff2');
 }
 
 :root {
   --sans-fallback: aria, helvetica, sans-serif;
-  --flama: flama, var(--sans-fallback);
-  --flama-semicondensed: 'flama semicondensed', var(--sans-fallback);
-  --flama-semicondensed-light: 'flama semicondensed light', var(--sans-fallback);
+  --flama: 'Flama', var(--sans-fallback);
+  --flama-semicondensed: 'Flama Semicondensed', var(--sans-fallback);
+  --flama-semicondensed-light: 'Flama Semicondensed Light', var(--sans-fallback);
   --next: 'next', var(--sans-fallback);
-  --next-poster: 'next poster', var(--sans-fallback);
+  --next-poster: 'NEXT Poster', var(--sans-fallback);
   --fira: 'fira code', var(--sans-fallback);
 }

@@ -46,7 +46,12 @@ const Hero = () => {
       </div>
       <div className={styles.background}>
         <div className={styles.teaser}>
-          <Image src={closedBanner} alt="Closed banner" layout="responsive" />
+          <Image
+            src={closedBanner}
+            alt="Closed banner"
+            layout="responsive"
+            loader={({ src }) => src}
+          />
         </div>
       </div>
       <div className={styles.scrollDown}>
