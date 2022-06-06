@@ -18,10 +18,16 @@
   src: url('/fonts/NEXT-Poster-Regular.woff2');
 }
 
+@font-face {
+  font-family: next;
+  src: url('/fonts/NEXT-Book-Regular.woff2');
+}
+
 :root {
   --sans-fallback: aria, helvetica, sans-serif;
   --flama: flama, var(--sans-fallback);
   --flama-semicondensed: 'flama semicondensed', var(--sans-fallback);
   --flama-semicondensed-light: 'flama semicondensed light', var(--sans-fallback);
+  --next: 'next', var(--sans-fallback);
   --next-poster: 'next poster', var(--sans-fallback);
 }

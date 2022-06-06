@@ -10,6 +10,30 @@
   background-color: var(--neutral-900);
 }
 
+.menuList {
+  margin-bottom: var(--spacing-11);
+  padding-inline: var(--spacing-6);
+}
+
+.menuList > dt {
+  margin-bottom: var(--spacing-4);
+  font-family: var(--next);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.menuList > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+  line-height: 1.1875;
+}
+
+.menuList > dd {
+  display: flex;
+  flex-direction: column;
+}
+
 :global(#navigation-menu):checked + nav > .menu {
   left: 0;
 }
