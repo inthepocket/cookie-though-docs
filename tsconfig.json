@@ -18,6 +18,7 @@
     "paths": {
       "@icons/*": ["icons/*"],
       "@styles/*": ["styles/*"],
+      "@hooks/*": ["hooks/*"],
       "@context/*": ["context/*"],
       "@atoms/*": ["components/atoms/*"],
       "@molecules/*": ["components/molecules/*"],

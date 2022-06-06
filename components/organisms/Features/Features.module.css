@@ -11,3 +11,14 @@
   overflow: hidden;
   height: calc(100vh - 128px);
 }
+
+@media screen and (min-width: 56.25rem) {
+  .features {
+    height: calc(calc(3 * 100vh) - calc(3 * 100px));
+  }
+
+  .content {
+    top: 100px;
+    height: calc(100vh - 100px);
+  }
+}

@@ -1,5 +1,6 @@
 .themeToggle {
   position: relative;
+  display: block;
   width: 48px;
   height: 48px;
   padding: 10px;
@@ -15,7 +16,10 @@
   display: block;
 }
 
-.themeToggle .icon > svg:last-of-type,
+.themeToggle .icon > svg:last-of-type {
+  display: none;
+}
+
 :checked + .themeToggle .icon > svg:first-of-type {
   display: none;
 }

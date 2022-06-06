@@ -8,4 +8,33 @@
 
 .links {
   display: flex;
+  align-items: center;
+}
+
+.linksDesktop {
+  display: none;
+}
+
+@media screen and (min-width: 56.25rem) {
+  .header {
+    width: 100%;
+    max-width: 75rem;
+    padding: 26px var(--spacing-6);
+    margin-inline: auto;
+  }
+
+  .links,
+  .linksDesktop {
+    gap: 64px;
+  }
+
+  .linksDesktop {
+    display: flex;
+    font-family: var(--flama-semicondensed-light);
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }

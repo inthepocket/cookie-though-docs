@@ -21,10 +21,18 @@ const Header = ({ id }: Props) => {
           </a>
         </Link>
       </li>
-      <li className={styles.links}>
-        <ThemeToggle />
-        <Hamburger id={id} />
-      </li>
+      <div className={styles.links}>
+        <div className={styles.linksDesktop}>
+          <li>Documentation</li>
+          <li>GitHub</li>
+        </div>
+        <li>
+          <ThemeToggle />
+        </li>
+        <li className={styles.hamburger}>
+          <Hamburger id={id} />
+        </li>
+      </div>
     </ul>
   );
 };

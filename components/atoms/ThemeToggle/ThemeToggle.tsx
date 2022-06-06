@@ -22,8 +22,9 @@ const ThemeToggle = () => {
         className="sr-only"
         checked={theme === 'dark'}
         onChange={handleChange}
+        aria-hidden
       />
-      <label htmlFor={id} className={styles.themeToggle}>
+      <label htmlFor={id} className={styles.themeToggle} role="button" aria-label="Toggle theme">
         <div className={styles.icon}>
           <Sun />
           <Moon />

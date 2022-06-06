@@ -1,13 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import Footer from '../components/molecules/Footer';
-
+import useIsMounted from '@hooks/useIsMounted';
+import Footer from '@molecules/Footer';
 import Features from '@organisms/Features';
 import Hero from '@organisms/Hero';
 import Navigation from '@organisms/Navigation';
 
 const Home: NextPage = () => {
+  const isMounted = useIsMounted();
+
   return (
     <>
       <Head>
@@ -18,12 +20,16 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <Navigation />
-      <main>
-        <Hero />
-        <Features />
-      </main>
-      <Footer />
+      {isMounted && (
+        <>
+          <Navigation />
+          <main>
+            <Hero />
+            <Features />
+          </main>
+          <Footer />
+        </>
+      )}
     </>
   );
 };

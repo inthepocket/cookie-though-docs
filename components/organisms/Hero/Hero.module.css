@@ -57,3 +57,59 @@
     height: 28px;
   }
 }
+
+@media screen and (min-width: 56.25rem) {
+  .hero {
+    display: flex;
+    width: 100%;
+    max-width: 75rem;
+    min-height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: space-between;
+    gap: 84px;
+    margin-inline: auto;
+  }
+
+  .content {
+    padding-top: 80px;
+    margin-bottom: 0;
+  }
+
+  .description {
+    max-width: 44ch;
+    margin-bottom: 80px;
+    font-size: 1.125rem;
+  }
+
+  .callToActions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+  }
+
+  .callToActions > li:not(:first-child) {
+    display: list-item;
+  }
+
+  .background {
+    flex: 1;
+  }
+
+  .teaser {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .scrollDown {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .description {
+    max-width: 46ch;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+}

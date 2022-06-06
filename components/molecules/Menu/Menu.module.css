@@ -53,6 +53,12 @@
   }
 }
 
+@media screen and (min-width: 56.25rem) {
+  .menu {
+    display: none;
+  }
+}
+
 @media screen and (prefers-reduced-motion: no-preference) {
   .menu {
     transition: left 300ms ease-in-out;

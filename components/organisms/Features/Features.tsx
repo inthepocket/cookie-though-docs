@@ -24,14 +24,11 @@ export const FeaturesContext = createContext<FeaturesContextValue>({
 const Features = () => {
   const featureListRef = useRef<HTMLUListElement>(null);
   const featureList = featureListRef.current;
-  const [, setIsMounted] = useState(false);
 
   const numberOfFeatures = 3;
   const [currentFeature, setCurrentFeature] = useState(0);
 
   const { scrollY } = useContext(ScrollContext);
-
-  useEffect(() => setIsMounted(true), [setIsMounted]);
 
   useEffect(() => {
     if (featureList) {

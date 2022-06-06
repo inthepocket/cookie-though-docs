@@ -22,3 +22,29 @@
     line-height: 1;
   }
 }
+
+@media screen and (min-width: 56.25rem) {
+  .callToAction {
+    font-size: 1rem;
+  }
+
+  .callToAction > svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .callToAction {
+    font-size: 1.25rem;
+  }
+
+  .callToAction > svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .callToActionCopy {
+    gap: 72px;
+  }
+}

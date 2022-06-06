@@ -1,14 +1,14 @@
-.tagline-hero > strong {
-  font-family: var(--next-poster);
-  font-weight: 400;
-}
-
 .tagline-hero {
   margin-bottom: var(--spacing-6);
   font-family: var(--flama-semicondensed-light);
   font-size: 3.25rem;
   font-weight: 450;
   line-height: 1;
+}
+
+.tagline-hero > strong {
+  font-family: var(--next-poster);
+  font-weight: 400;
 }
 
 .tagline-feature {
@@ -27,6 +27,31 @@
 
   .tagline-feature {
     margin-bottom: var(--spacing-8);
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 56.25rem) {
+  .tagline-hero {
+    font-size: 4.75rem;
+  }
+
+  .tagline-feature {
+    font-size: 3.75rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .tagline-hero {
+    font-size: 6.25rem;
+    letter-spacing: 0.5px;
+  }
+
+  .tagline-hero > strong {
+    letter-spacing: 2.5px;
+  }
+
+  .tagline-feature {
     font-size: 4.5rem;
   }
 }

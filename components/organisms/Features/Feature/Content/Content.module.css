@@ -2,3 +2,13 @@
   padding-top: var(--spacing-2);
   margin-bottom: var(--spacing-10);
 }
+
+@media screen and (min-width: 56.25rem) {
+  .content {
+    width: 44ch;
+    padding: 0;
+    padding-bottom: 96px;
+    margin: 0;
+    font-weight: 1.125rem;
+  }
+}
