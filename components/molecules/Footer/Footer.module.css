@@ -31,6 +31,10 @@
   fill: var(--neutral-000);
 }
 
+.footerLinks {
+  display: none;
+}
+
 @media screen and (min-width: 48rem) {
   .footer {
     padding: 57.8px 0;
@@ -44,5 +48,37 @@
   .inThePocket {
     width: 95.2px;
     height: 18px;
+  }
+}
+
+@media screen and (min-width: 56.25rem) {
+  .footer {
+    display: flex;
+    max-width: 75rem;
+    justify-content: space-between;
+    padding: var(--spacing-9) var(--spacing-6);
+    margin-inline: auto;
+  }
+
+  .footer > a {
+    align-items: flex-end;
+    margin-inline: 0;
+  }
+
+  .footerLinks {
+    display: flex;
+    gap: var(--spacing-9);
+  }
+
+  .footerLinksList > dt {
+    margin-bottom: var(--spacing-2);
+    font-family: var(--next);
+  }
+
+  .footerLinksList > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    line-height: 1.1875;
   }
 }
