@@ -1,7 +1,4 @@
 import type { ReactNode } from 'react';
-import { createContext, useContext } from 'react';
-
-import { FeaturesContext } from '../Features';
 
 import Background from './Background';
 import Content from './Content';
@@ -10,31 +7,14 @@ import Icon from './Icon';
 import Tagline from './Tagline';
 
 interface Props {
-  index: number;
   children: ReactNode;
 }
 
-export const ProgressContext = createContext(0);
-
-const Feature = ({ index, children }: Props) => {
-  const { numberOfFeatures, currentFeature } = useContext(FeaturesContext);
-  const progress = Math.max(0, currentFeature - index);
-  const opacity =
-    0.85 < progress && index < numberOfFeatures - 1
-      ? Math.max(0, (1 - progress) * 4)
-      : Math.min(1, Math.max(0, progress * 4));
-
+const Feature = ({ children }: Props) => {
   return (
-    <ProgressContext.Provider value={progress}>
-      <li className={styles.feature}>
-        <div
-          className={styles.content}
-          style={{ pointerEvents: progress >= 0 || progress >= 1 ? 'none' : undefined, opacity }}
-        >
-          {children}
-        </div>
-      </li>
-    </ProgressContext.Provider>
+    <li className={styles.feature}>
+      <div className={styles.content}>{children}</div>
+    </li>
   );
 };
 

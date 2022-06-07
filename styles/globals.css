@@ -36,3 +36,10 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
+
+@media screen and (min-width: 56.25rem) {
+  html {
+    scroll-padding-top: 100px;
+    scroll-snap-type: y mandatory;
+  }
+}

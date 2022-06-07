@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useLayoutEffect } from 'react';
 
 import styles from './Home.module.css';
 
@@ -9,6 +10,13 @@ import Hero from '@organisms/Hero';
 import Navigation from '@organisms/Navigation';
 
 const Home = () => {
+  useLayoutEffect(() => {
+    const html = document.documentElement;
+    html.classList.add(styles.scrollSnap);
+
+    return () => html.removeAttribute('class');
+  }, []);
+
   return (
     <>
       <Head>

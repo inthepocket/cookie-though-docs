@@ -3,6 +3,7 @@
   padding: 43.45px 0;
   font-family: var(--flama-semicondensed-light);
   font-size: 0.6875rem;
+  scroll-snap-align: end;
 }
 
 .footer > a {

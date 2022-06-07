@@ -4,12 +4,13 @@
 }
 
 .feature {
-  position: absolute;
-  top: 0;
   width: 100%;
+  height: calc(100vh - 128px);
+  scroll-snap-align: start;
 }
 
 .content {
+  overflow: hidden;
   font-weight: 550;
   letter-spacing: 0.61px;
   line-height: 1.625;
@@ -22,10 +23,19 @@
 }
 
 @media screen and (min-width: 56.25rem) {
+  .feature {
+    position: unset;
+    display: flex;
+    height: calc(100vh - 100px);
+    align-items: center;
+    scroll-snap-align: start;
+  }
+
   .content {
     display: flex;
     width: 100%;
     max-width: 75rem;
+    height: unset;
     align-items: center;
     font-size: 1.125rem;
     gap: 84px;

@@ -1,5 +1,15 @@
+.scrollSnap {
+  overflow: scroll;
+  scroll-padding-top: 128px;
+  scroll-snap-type: y mandatory;
+}
+
 .main {
   padding: 0 var(--spacing-6);
+}
+
+.main section:first-of-type {
+  scroll-snap-align: start;
 }
 
 @media screen and (min-width: 56.25rem) {
@@ -9,5 +19,9 @@
     max-width: 75rem;
     gap: 84px;
     margin-inline: auto;
+  }
+
+  .main section:first-of-type {
+    scroll-snap-align: start;
   }
 }
