@@ -1,9 +1,10 @@
-import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import { createContext, useContext, useRef } from 'react';
 
 import Feature from './Feature';
 import styles from './Features.module.css';
 
 import { ScrollContext } from '@context/ScrollContext';
+import useIsMounted from '@hooks/useIsMounted';
 import Accessibility from '@icons/accessibility.svg';
 import Compliant from '@icons/compliant.svg';
 import Lightweight from '@icons/lightweight.svg';
@@ -21,27 +22,26 @@ export const FeaturesContext = createContext<FeaturesContextValue>({
 });
 
 const Features = () => {
+  useIsMounted();
   const featureListRef = useRef<HTMLUListElement>(null);
   const featureList = featureListRef.current;
 
   const numberOfFeatures = 3;
-  const [currentFeature, setCurrentFeature] = useState(0);
+  let currentFeature = 0;
 
   const { scrollY } = useContext(ScrollContext);
 
-  useEffect(() => {
-    if (featureList) {
-      const { clientHeight, offsetTop } = featureList;
-      const screenHeight = window.innerHeight;
-      const screenHalfHeight = screenHeight / 2;
-      const percentY =
-        Math.min(
-          clientHeight + screenHalfHeight,
-          Math.max(-screenHeight, scrollY - offsetTop) + screenHalfHeight,
-        ) / clientHeight;
-      setCurrentFeature(percentY * numberOfFeatures);
-    }
-  }, [featureList, scrollY]);
+  if (featureList) {
+    const { clientHeight, offsetTop } = featureList;
+    const screenHeight = window.innerHeight;
+    const screenHalfHeight = screenHeight / 2;
+    const percentY =
+      Math.min(
+        clientHeight + screenHalfHeight,
+        Math.max(-screenHeight, scrollY - offsetTop) + screenHalfHeight,
+      ) / clientHeight;
+    currentFeature = percentY * numberOfFeatures;
+  }
 
   return (
     <FeaturesContext.Provider value={{ numberOfFeatures, currentFeature }}>

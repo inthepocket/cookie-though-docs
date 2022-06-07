@@ -3,16 +3,22 @@ import type { ChangeEvent } from 'react';
 
 import styles from './ThemeToggle.module.css';
 
+import useIsMounted from '@hooks/useIsMounted';
 import Moon from '@icons/moon.svg';
 import Sun from '@icons/sun.svg';
 
 const ThemeToggle = () => {
   const id = 'theme-toggle';
-  const { theme, setTheme } = useTheme();
+  const isMounted = useIsMounted();
+  const { resolvedTheme, setTheme } = useTheme();
 
   const handleChange = ({ target: { checked } }: ChangeEvent<HTMLInputElement>) => {
     setTheme(checked ? 'dark' : 'light');
   };
+
+  if (!isMounted) {
+    return <div className={styles.themeToggle} />;
+  }
 
   return (
     <>
@@ -20,7 +26,7 @@ const ThemeToggle = () => {
         type="checkbox"
         id={id}
         className="sr-only"
-        checked={theme === 'dark'}
+        checked={resolvedTheme === 'dark'}
         onChange={handleChange}
         aria-hidden
       />

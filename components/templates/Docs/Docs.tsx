@@ -4,7 +4,6 @@ import type { ReactNode } from 'react';
 
 import styles from './Docs.module.css';
 
-import useIsMounted from '@hooks/useIsMounted';
 import components from '@mdx';
 import Navigation from '@organisms/Navigation';
 import Sidebar from '@organisms/Sidebar';
@@ -18,12 +17,6 @@ interface Props {
 }
 
 const Docs = ({ frontmatter, children }: Props) => {
-  const isMounted = useIsMounted();
-
-  if (!isMounted) {
-    return null;
-  }
-
   return (
     <div className={styles.docs}>
       <Navigation isDocs />
