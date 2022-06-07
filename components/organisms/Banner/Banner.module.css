@@ -1,0 +1,21 @@
+.banner {
+  display: none;
+}
+
+@media screen and (min-width: 56.25rem) {
+  .banner {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    max-height: calc(100vh - 100px);
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .teaser {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}

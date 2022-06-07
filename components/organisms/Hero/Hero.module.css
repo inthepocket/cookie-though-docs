@@ -1,7 +1,6 @@
 .hero {
   position: relative;
   min-height: calc(100vh - 128px);
-  padding: 0 var(--spacing-6);
 }
 
 .description {
@@ -92,13 +91,7 @@
   }
 
   .background {
-    flex: 1;
-  }
-
-  .teaser {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
+    display: none;
   }
 
   .scrollDown {

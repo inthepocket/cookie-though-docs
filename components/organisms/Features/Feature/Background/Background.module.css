@@ -16,6 +16,6 @@
 
 @media screen and (min-width: 56.25rem) {
   .background {
-    flex: 1;
+    display: none;
   }
 }

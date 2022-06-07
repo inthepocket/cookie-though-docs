@@ -1,0 +1,13 @@
+.main {
+  padding: 0 var(--spacing-6);
+}
+
+@media screen and (min-width: 56.25rem) {
+  .main {
+    display: flex;
+    width: 100%;
+    max-width: 75rem;
+    gap: 84px;
+    margin-inline: auto;
+  }
+}
