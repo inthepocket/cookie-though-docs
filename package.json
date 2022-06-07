@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "eslint --fix --ext .tsx,ts,mdx pages/ components/",
+    "lint": "eslint --fix --ext .tsx,ts,mdx pages/ components/ hooks/ context/",
     "postinstall": "./scripts/postinstall.sh",
     "prettier": "prettier --write components pages styles",
     "stylelint": "stylelint '**/*.css' --fix"

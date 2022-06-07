@@ -15,6 +15,7 @@ const Home: NextPage = () => {
           name="description"
           content="Easy to use, minimal footprint application that manages cookie preferences. So delicious, you'll never need another library again."
         />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Navigation />
