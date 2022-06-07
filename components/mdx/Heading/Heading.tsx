@@ -23,7 +23,7 @@ const Heading = ({ Tag, children }: Props) => {
   return (
     <Tag id={slug} className={styles.heading}>
       <Link href={`#${slug}`}>
-        <a>
+        <a className={styles.headingLink}>
           {children}
           <LinkIcon width="16" height="16" viewBox="0 0 20 20" />
         </a>

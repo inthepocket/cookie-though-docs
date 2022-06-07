@@ -2,17 +2,17 @@
   scroll-margin-top: calc(100px + var(--spacing-6));
 }
 
-.heading > a {
+.headingLink {
   display: flex;
   width: fit-content;
   align-items: center;
 }
 
-.heading > a > svg {
+.headingLink > svg {
   margin-left: var(--spacing-2);
   opacity: 0;
 }
 
-.heading > a:hover > svg {
+.headingLink:hover > svg {
   opacity: 1;
 }

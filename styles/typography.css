@@ -1,26 +1,26 @@
 @font-face {
   font-family: Flama;
-  src: url('/fonts/Flama-Book.woff2') format('woff2');
+  src: url('../public/fonts/Flama-Book.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Flama Semicondensed';
-  src: url('/fonts/FlamaSemicondensed-Basic.woff2') format('woff2');
+  src: url('../public/fonts/FlamaSemicondensed-Basic.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Flama Semicondensed Light';
-  src: url('/fonts/FlamaSemicondensed-Light.woff2') format('woff2');
+  src: url('../public/fonts/FlamaSemicondensed-Light.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'NEXT Poster';
-  src: url('/fonts/NEXT-Poster-Regular.woff2') format('woff2');
+  src: url('../public/fonts/NEXT-Poster-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: NEXT;
-  src: url('/fonts/NEXT-Book-Regular.woff2') format('woff2');
+  src: url('../public/fonts/NEXT-Book-Regular.woff2') format('woff2');
 }
 
 :root {
