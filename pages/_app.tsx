@@ -1,4 +1,8 @@
+import '@styles/reset.css';
 import '@styles/globals.css';
+import '@styles/typography.css';
+import '@styles/a11y.css';
+import '@styles/rehype.css';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
