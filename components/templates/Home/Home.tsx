@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 
 import styles from './Home.module.css';
 
@@ -10,6 +10,8 @@ import Hero from '@organisms/Hero';
 import Navigation from '@organisms/Navigation';
 
 const Home = () => {
+  const navigationRef = useRef<HTMLElement>(null);
+
   useLayoutEffect(() => {
     const html = document.documentElement;
     html.classList.add(styles.scrollSnap);
@@ -28,10 +30,13 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navigation />
-      <main className={styles.main}>
+      <div className={styles.gradient}>
+        <div className={styles.blur} />
+      </div>
+      <Navigation ref={navigationRef} />
+      <main id="main" className={styles.main}>
         <div>
-          <Hero />
+          <Hero navigationRef={navigationRef} />
           <Features />
         </div>
         <Banner />

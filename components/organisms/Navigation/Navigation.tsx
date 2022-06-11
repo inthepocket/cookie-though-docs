@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import type { ChangeEvent } from 'react';
-import { useEffect } from 'react';
+import { forwardRef, useEffect } from 'react';
 
 import styles from './Navigation.module.css';
 
@@ -11,7 +11,7 @@ interface Props {
   isDocs?: boolean;
 }
 
-const Navigation = ({ isDocs = false }: Props) => {
+const Navigation = forwardRef<HTMLElement, Props>(({ isDocs = false }, ref) => {
   const router = useRouter();
   const id = 'navigation-menu';
 
@@ -39,12 +39,14 @@ const Navigation = ({ isDocs = false }: Props) => {
         role="button"
         onChange={handleChange}
       />
-      <nav className={`${styles.navigation}  ${isDocs ? styles.navigationDocs : ''}`}>
+      <nav ref={ref} className={`${styles.navigation}  ${isDocs ? styles.navigationDocs : ''}`}>
         <Header id={id} />
         <Menu />
       </nav>
     </>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;
