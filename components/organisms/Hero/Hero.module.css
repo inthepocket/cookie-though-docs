@@ -3,6 +3,12 @@
   min-height: calc(100vh - 128px);
 }
 
+.content,
+.background {
+  position: relative;
+  z-index: 20;
+}
+
 .description {
   margin-bottom: var(--spacing-4);
   font-weight: 550;

@@ -18,6 +18,7 @@
     "paths": {
       "@public/*": ["public/*"],
       "@icons/*": ["assets/icons/*"],
+      "@illustrations/*": ["assets/illustrations/*"],
       "@styles/*": ["styles/*"],
       "@hooks/*": ["hooks/*"],
       "@context/*": ["context/*"],

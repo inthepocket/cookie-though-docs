@@ -4,6 +4,9 @@
   --black: #000;
   --neutral-000: var(--black);
   --neutral-900: var(--white);
+  --purple-700: #320073;
+  --purple-800: #00003d;
+  --purple-900: #150025;
 
   /* Spacing */
   --spacing-1: 4px;
@@ -20,9 +23,11 @@
   --spacing-12: 64px;
 }
 
-[data-theme='dark'] {
+html[data-theme='dark'] {
   --neutral-000: var(--white);
   --neutral-900: var(--black);
+
+  background-color: var(--purple-900);
 }
 
 * {

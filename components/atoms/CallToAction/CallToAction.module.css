@@ -48,3 +48,7 @@
     gap: 72px;
   }
 }
+
+:global([data-theme='dark']) .callToAction {
+  background-color: var(--purple-800);
+}

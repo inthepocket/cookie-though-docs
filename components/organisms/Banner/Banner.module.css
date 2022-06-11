@@ -5,6 +5,7 @@
 @media screen and (min-width: 56.25rem) {
   .banner {
     position: sticky;
+    z-index: 20;
     top: 100px;
     display: flex;
     max-height: calc(100vh - 100px);
